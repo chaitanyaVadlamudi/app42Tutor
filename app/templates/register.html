@@ -1,0 +1,31 @@
+<form class="form-horizontal" ng-controller="registerCtrl">
+    <fieldset>
+        <legend>Register</legend>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">User Name</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="uName" placeholder="User Name" ng-model="userDetails.userName">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="pwd" placeholder="Email" ng-model="userDetails.email">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="col-lg-2 control-label"> Password</label>
+            <div class="col-lg-6">
+                <input type="password" class="form-control" id="Eid" placeholder="Password" ng-model="userDetails.password">
+            </div>
+        </div>
+      <div class="form-group">
+            <label class="col-lg-2 control-label"> </label>
+            <div class="col-lg-6 col-lg-offset-4">
+                <button class="btn btn-primary" ng-click="register()">Register</button>
+            </div>
+        </div>
+    </fieldset>
+    {{userDetails}}
+</form>
