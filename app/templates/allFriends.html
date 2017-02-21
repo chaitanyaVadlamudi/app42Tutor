@@ -1,0 +1,10 @@
+<form class="form-horizontal" ng-controller="allFriendsCtrl">
+<h3 class="col-lg-6">All Friends</h3>
+    <a ui-sref="Friends">click here to add friends</a>
+    <div class="col-lg-6 col-lg-offset-4" ng-repeat="item in friendsList">
+        <h3>{{item}}</h3>
+        <p><button ng-click="unFriend(item);clicked=!clicked" ng-class="{'btn btn-warning':clicked,'btn-primary':!clicked}">Unfriend</button>
+        <button ng-click="blockUser(item);clicked=!clicked" ng-class="{'btn btn-primary':clicked,' btn btn-danger':!clicked}">Block</button>
+        </p>
+    </div>
+</form>

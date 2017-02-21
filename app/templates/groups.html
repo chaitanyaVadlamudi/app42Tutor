@@ -1,0 +1,11 @@
+<form class="form-horizontal" ng-controller="groupsCtrl">
+    <a ui-sref="CreateGroup">Create New Group</a>
+   <div class="panel panel-default">
+       <div class="panel-body" style="color:grey">Groups you are in
+       </div>
+</div>
+    <div class="col-lg-6 col-lg-offset-4" ng-repeat="item in allGroups">
+        <span style="color:blue" ng-click="mygroup(item)">{{item}}</span>
+        
+    </div>
+</form>

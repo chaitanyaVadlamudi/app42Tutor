@@ -1,0 +1,35 @@
+<form class="form-horizontal" ng-controller="createGroupCtrl">
+    <div class="form-group">
+        <label for="inputGroupName" class="col-lg-2 control-label">Group Name</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" id="groupName" placeholder="Enter Group Name" ng-model="create.groupName">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="radio">
+            <label>
+                <input type="radio" value="P" name="public" ng-model="create.privacy"><strong>Public</strong> Anyone can find the group, it's members and their posts.
+            </label>
+        </div>
+        <hr>
+
+        <div class="radio">
+            <label>
+                <input type="radio" value="C" name="closed" ng-model="create.privacy"><strong>Closed</strong> Anyone can see the group and see who's in it,only members can see the posts.
+            </label>
+            <hr>
+
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" value="S" name="secret" ng-model="create.privacy"><strong>Secret</strong> Only members can find the group and see posts.
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label"> </label>
+        <div class="col-lg-6 col-lg-offset-4">
+            <button class="btn btn-primary" ng-click="createGroup()">Create</button>
+        </div>
+    </div>
+</form>
